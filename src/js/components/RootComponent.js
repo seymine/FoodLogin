@@ -28,26 +28,25 @@ export default{
         }
     },
     methods:{
+        init(){
+            gsap.set(".VPApp",{
+                backgroundImage:"linear-gradient(120deg,#FF725E,#D8CACD)",
+            })
+    
+            gsap.to(".VPApp",{
+                backgroundImage:"linear-gradient(120deg,#455A64,#D8CACD)",
+                repeat:-1,
+                yoyo:true,
+                duration:3
+            })
+        },   
+
         toggle(left,right){
             this.left = left
             this.right=right
         }
     },
-    mounted(){
-       
-        gsap.set(".VPApp",{
-            backgroundImage:"linear-gradient(120deg,#FF725E,#D8CACD)",
-        })
-
-        gsap.to(".VPApp",{
-            backgroundImage:"linear-gradient(120deg,#455A64,#D8CACD)",
-            repeat:-1,
-            yoyo:true,
-            duration:3
-        })
-
-        
-        
-        
+    mounted(){ 
+        this.init()
     }
 }
