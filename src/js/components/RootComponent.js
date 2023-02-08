@@ -15,12 +15,24 @@ export default{
         <div class="VPApp"> 
             <div class="VPContainer">
                 <main class="VPMain">
-                   <component :is="'login'"> </component>
-                   <component :is="'form-login'"> </component>
+                   <component :is="left" @toggle="toggle"> </component>
+                   <component :is="right"> </component>
                 </main>
             </div>
         </div>
     `, 
+    data(){
+        return{
+            left:"login",
+            right:"form-login"
+        }
+    },
+    methods:{
+        toggle(left,right){
+            this.left = left
+            this.right=right
+        }
+    },
     mounted(){
        
         gsap.set(".VPApp",{

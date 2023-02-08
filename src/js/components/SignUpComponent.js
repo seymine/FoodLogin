@@ -3,6 +3,7 @@ export default{
     components:{
         ButtonComponent
     },
+    emits:["toggle"],
     template:
     /*html*/
     `
@@ -10,14 +11,14 @@ export default{
             <div>
                 <div class="title">
                     <h1 class="text-5xl font-bold ">  Why sign up ? </h1>
-                    <h3 class="text-sm  tracking-wider mt-2"> Find out new food & converse with people all around the world. </h3>
+                    <h3 class="text-sm  tracking-wider mt-2"> Find out new recipes & interact with people all around the world. </h3>
                 </div>
                 <p class="mt-8">  
                     <img src="../src/images/deconstructed-food.png" alt="deconstructed-food.png" class="w-72"/> 
                 </p>
                 <div class="flex justify-between items-center text-xs  absolute bottom-5 left-5 right-24 bottom ">
                     <p> Already have account ? </p>
-                    <p class="font-bold cursor-pointer">  Log in </p>
+                    <p class="font-bold cursor-pointer" @click="$emit('toggle','login','form-login')">  Log in </p>
                 </div>
                 
             </div>

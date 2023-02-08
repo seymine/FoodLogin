@@ -3,6 +3,9 @@ module.exports = {
   content: ["./public/**/*.{html,js}","./src/**/*.js"],
   theme: {
     extend: {
+      fontFamily:{
+        nunito:"Nunito Sans"
+      },
       colors:{
         primary:"#DBDFE1",
         secondary:"rgba(219,223,225,0.3)",

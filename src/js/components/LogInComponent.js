@@ -3,6 +3,7 @@ export default{
     components:{
         ButtonComponent
     },
+    emits:["toggle"],
     template:
     /*html*/
     `
@@ -17,7 +18,7 @@ export default{
                 </p>
                 <div class="flex justify-between items-center text-xs  absolute bottom-5 left-5 right-24 bottom ">
                     <p> Don't have an account ? </p>
-                    <p class="font-bold cursor-pointer" >  Sign up </p>
+                    <p class="font-bold cursor-pointer" @click="$emit('toggle','signup','form-signup')">  Sign up </p>
                 </div>
                 
             </div>
