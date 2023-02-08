@@ -1,9 +1,13 @@
 import LogInComponent from "./LogInComponent.js"
 import FormLogInComponent from "./FormLoginComponent.js"
+import SignUpComponent from "./SignUpComponent.js"
+import FormSignUpComponent from "./FormSignUpComponent.js"
 export default{
     components:{
-        LogInComponent,
-        FormLogInComponent
+        "login":LogInComponent,
+        "form-login":FormLogInComponent,
+        "signup":SignUpComponent,
+        "form-signup":FormSignUpComponent
     },
     template:
     /*html*/
@@ -11,8 +15,8 @@ export default{
         <div class="VPApp"> 
             <div class="VPContainer">
                 <main class="VPMain">
-                   <component :is="'LogInComponent'"> </component>
-                   <component :is="'FormLogInComponent'"> </component>
+                   <component :is="'login'"> </component>
+                   <component :is="'form-login'"> </component>
                 </main>
             </div>
         </div>
