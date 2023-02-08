@@ -1,3 +1,3 @@
 # FoodLogin
 
-Built with Vue.js, TailwindCss & GSAP
+Built with Vue.js, TailwindCSS &  animated with GSAP
