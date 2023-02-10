@@ -1,7 +1,10 @@
 import ButtonComponent from "./ButtonComponent.js"
+import InputComponent from "./InputComponent.js"
+
 export default{
     components:{
-        ButtonComponent
+        ButtonComponent,
+        InputComponent
     },
     template:
     /*html*/
@@ -10,19 +13,12 @@ export default{
             <form class="VPForm">
                 <h1 class=" text-2xl text-primary mb-8"> Sign up </h1> 
                 
-                <div class="VPForm-input">
-                        <input type="text" class="VPInput" @focus="onFocus" @blur="onBlur"/>
-                        <span data-placeholder="Username" class="VPPlaceholder" ref="placeholder"></span>
-                </div>
-                <div class="VPForm-input">
-                        <input type="password" class="VPInput" @focus="onFocus" @blur="onBlur"/>
-                        <span data-placeholder="Password" class="VPPlaceholder"></span>
-                </div>
-                <div class="VPForm-input">
-                        <input type="password" class="VPInput" @focus="onFocus" @blur="onBlur"/>
-                        <span data-placeholder="Confirm password" class="VPPlaceholder"></span>
-                </div>
+                <InputComponent type="text" placeholder="Username"/>
+                <InputComponent type="password" placeholder="Password"/>
+                <InputComponent type="password" placeholder="Confirm password"/>
+              
                 <ButtonComponent class="w-full mt-5"> Sign up </ButtonComponent>
+                
                 </form>  
 
            
@@ -36,16 +32,7 @@ export default{
                 duration:1.5
             })
         },
-        onFocus(e){
-            let input = e.target; 
-            input.classList.add("VPFocus")
-        }, 
-        onBlur(e){
-            let input = e.target; 
-            if (!input.value){
-                input.classList.remove("VPFocus")
-            }
-        }
+       
     }, 
     mounted(){
        this.init()

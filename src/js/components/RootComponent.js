@@ -16,7 +16,7 @@ export default{
             <div class="VPContainer">
                 <main class="VPMain">
                    <component :is="left" @toggle="toggle"> </component>
-                   <component :is="right"> </component>
+                   <component :is="right" @toggle="toggle"> </component>
                 </main>
             </div>
         </div>
@@ -28,25 +28,13 @@ export default{
         }
     },
     methods:{
-        init(){
-            gsap.set(".VPApp",{
-                backgroundImage:"linear-gradient(120deg,#FF725E,#D8CACD)",
-            })
-    
-            gsap.to(".VPApp",{
-                backgroundImage:"linear-gradient(120deg,#455A64,#D8CACD)",
-                repeat:-1,
-                yoyo:true,
-                duration:3
-            })
-        },   
-
+       
         toggle(left,right){
             this.left = left
             this.right=right
         }
     },
     mounted(){ 
-        this.init()
+       
     }
 }

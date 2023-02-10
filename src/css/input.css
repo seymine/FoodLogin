@@ -6,11 +6,11 @@
 
 
 *{
-    @apply text-primary font-nunito;
+    @apply text-primary font-nunito ;
 }
 
 .VPApp{
-    @apply w-screen h-screen p-4 sm:p-0 ;
+    @apply w-screen h-screen p-4 sm:p-0 bg-back;
 }
 
 .VPContainer{
@@ -18,7 +18,7 @@
 }
 
 .VPMain{
-   @apply w-max h-2/3 md:w-1/2 lg:w-2/3 rounded-lg shadow-2xl grid md:grid-cols-2  ;
+   @apply w-max h-2/3 md:w-1/2 lg:w-2/3 rounded-lg shadow-xl grid md:grid-cols-2  ;
 }
 
 .VPButton{
@@ -35,7 +35,7 @@
 
 
 .VPInput{
-    @apply bg-transparent outline-0  h-8 px-4 py-2 text-sm;
+    @apply bg-transparent outline-0  h-8 px-4 py-2 text-sm w-full;
 }
 
 
