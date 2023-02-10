@@ -15,11 +15,6 @@ export default{
     `,
     methods:{
         init(){
-            gsap.from(".title",{
-                x:20, 
-                duration:1.5
-            })
-    
             gsap.from("img",{
                 y:20,
                 duration:1.5

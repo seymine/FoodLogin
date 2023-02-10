@@ -32,10 +32,13 @@ export default{
     `,
     methods:{
         init(){
-        
+            gsap.from(".title",{
+                x:-20, 
+                duration:1.5
+            })
             gsap.from(".bottom",{
                 opacity:0,
-                delay:1.5,
+                delay:1,
                 duration:1.5
             })
         }

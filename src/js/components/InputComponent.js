@@ -9,12 +9,17 @@ export default{
     </div>
     `, 
     methods:{
+        
         onFocus(e){
-            let input = e.target; 
+            let input = e.target,
+                parent = input.parentNode; 
+            parent.classList.add("border-secondary-dark")
             input.classList.add("VPFocus");
         }, 
         onBlur(e){
-            let input = e.target; 
+            let input = e.target,
+                parent = input.parentNode; 
+            parent.classList.remove("border-secondary-dark")
             if (!input.value){
                 input.classList.remove("VPFocus")
             }

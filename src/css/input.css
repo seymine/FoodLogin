@@ -6,7 +6,12 @@
 
 
 *{
-    @apply text-primary font-nunito ;
+    @apply text-primary-dark font-nunito ;
+}
+
+
+button{
+    @apply border-secondary-light;
 }
 
 .VPApp{
@@ -22,7 +27,7 @@
 }
 
 .VPButton{
-    @apply text-sm shadow-md hover:shadow-lg px-2 py-1 rounded-md text-primary  tracking-wider border-2 border-secondary transition ease-out duration-300 hover:bg-tertiary hover:border-tertiary ;
+    @apply text-sm shadow-md hover:shadow-lg px-2 py-1 rounded-md  tracking-wider  bg-secondary-light  text-primary-light h-10 font-bold transition-all duration-500 ease-out hover:bg-secondary-dark;
 }
 
 .VPForm{
@@ -30,18 +35,18 @@
 }
 
 .VPForm-input{
-    @apply bg-secondary rounded-md relative mt-6 w-full;
+    @apply border transition duration-300 ease-out rounded-md relative mt-6 w-full text-secondary-dark;
 }
 
 
 .VPInput{
-    @apply bg-transparent outline-0  h-8 px-4 py-2 text-sm w-full;
+    @apply bg-transparent outline-0  h-10 px-4 py-2 text-sm font-bold w-full;
 }
 
 
 .VPPlaceholder::before{
     content: attr(data-placeholder);
-    transition: .3s ease-out;
+    transition: .4s ease-out;
     @apply text-xs absolute left-4 top-1/2 transform -translate-y-1/2 -z-10;
 }
 
